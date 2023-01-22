@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEW FORM</title>
+</head>
+
+<body>
+
+    <h1>FILL THIS FORM</h1>
+
+    <form action="backend.php">
+        <!-- div is block element- pura block space leta hai -->
+        <!-- input, label are inline element- single line spcae leta hai -->
+        <div>
+            <label for="name">NAME:</label>
+            <input type="text" name="myName" id="name">
+        </div>
+        <br>
+
+
+        <div>
+            <label for="branch">BRANCH:</label>
+            <input type="text" name="myBranch" id="branch">
+        </div>
+        <br>
+
+
+        <div>
+            <label for="email">EMAIL:</label>
+            <input type="email" name="myEmail" id="email">
+        </div>
+        <br>
+
+        <div>
+            <label for="bday">BIRTH DATE:</label>
+            <input type="date" name="myDate" id="bday">
+        </div>
+        <br>
+
+
+        <div>
+            Gender: <input type="radio" name="myRadio"> M <input type="radio" name="myRadio"> F <input type="radio"
+                name="myRadio"> Others
+        </div>
+        <br>
+
+
+        <div>
+            <label for="cgpa">CGPA:</label>
+            <input type="number" name="myNumber" id="cgpa">
+        </div>
+        <br>
+
+        <div>
+            Write about yourself<br> <textarea name="myTextarea" cols="35" rows="10"></textarea>
+        </div>
+        <br>
+
+
+        <div>
+            <label for="phone"> WHICH PHONE DO YOU HAVE ?</label>
+            <select name="myPhone" id="phone">
+
+                <option value="blank"></option>
+                <option value="1+">ONEPLUS</option>
+                <option value="iphone">IPHONE</option>
+                <option value="ss">SAMSUNG</option>
+                <option value="mi">REDMI</option>
+            </select>
+
+        </div>
+        <br>
+
+        <div>
+            I have read all the terms and conditions <input type="checkbox" name="myCheckbox" checked>
+        </div>
+        <br>
+
+        <div>
+            <input type="submit" value="SUBMIT NOW">
+            <input type="reset" value="RESET NOW">
+        </div>
+        <br>
+
+        <a href="/html files/main.html"><strong>GO TO HOME PAGE</strong></a>
+
+    </form>
+</body>
+
+</html>

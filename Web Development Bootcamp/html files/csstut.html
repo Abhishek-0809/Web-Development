@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS TUTORIAL</title>
+
+    <!-- filhaal externally linked css wale section ko zyada preference hai over internal css kyuki woh sabse latest likha hua hai -->
+
+    <!-- internal css -->
+    <style>
+        #inline {
+            text-decoration: underline;
+            color: midnightblue;
+            background-color: beige;
+        }
+
+        /* agar kisi cheez ki styling preference order pe na chod kar agar khudse he usko priority deni hai toh use (!important) - isse woh particular styling he use hogi irrespective of uska preference kam hai ya zyada */
+        #internal p {
+
+            font-size: 2vw;
+            color: rgb(61, 42, 19);
+            background-color: rgb(102, 75, 75) !important
+                /* important ka mtlb hai ki usko koi overwrite nai kar skta */
+        }
+
+        /* element selector */
+        p {
+            font-weight: bolder;
+        }
+
+        /* class selector */
+        .redElement {
+            color: red;
+        }
+
+        .border {
+            border: 3px solid green;
+        }
+
+        .bgColor {
+            background-color: rgb(0, 41, 102);
+        }
+
+        .centerAlign {
+            text-align: center;
+        }
+
+        .fontSize {
+            font-size: larger;
+        }
+
+        /* id selector */
+        #mix {
+            color: rgb(46, 0, 54);
+            border: 3px solid rgb(255, 0, 132);
+            background-color: rgb(212, 186, 230);
+            font-size: larger;
+        }
+
+        /* Grouping selector */
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 40px;
+            /* Height of the footer */
+            background: rgb(204, 0, 255);
+            align-items: center;
+            justify-content: center;
+
+        }
+    </style>
+
+    <!-- internal vs external css mei jo sabse latest(latest bole toh code mei sabse niche) css styling kiya hoga wohi end result mei reflect hoga -->
+
+    <!-- external css linked -->
+    <link rel="stylesheet" href="/css files/externaltut.css">
+</head>
+
+<body>
+
+    <header style="text-decoration: underline;" class="centerAlign bgColor">
+        <H2>CSS TUTORIAL</H2>
+        <a href="/html files/main.html" style="font-size: 50px; text-transform: uppercase; color: beige; ">go to home
+            tab</a>
+
+    </header>
+    <section id="inline">
+        <h4 style="font-size: large; text-decoration: underline;">Inline CSS</h4>
+        This section is for <strong><em>INLINE CSS</em></strong>
+        <p
+            style="color: gold; background-color: black; border-style: dashed; border-color: limegreen ; font-size: large;">
+            In inline css,
+            style everything in
+            the same line. Here color of text and background color are styled in this
+            line itself.</p>
+
+    </section>
+
+    <section id="internal">
+        <h4>Internal CSS</h4>
+        This section is for <strong><em>INTERNAL CSS</em></strong>
+        <p>INLINE CSS HAS MORE PREFERENCE OVER INTERNAL CSS, meaning Internal CSS mei kuch bhi property and value define
+            krne do kisi 'xyz' cheez ko but agar uss same 'xyz' cheez ko inline css di rhegi toh woh inline css ke
+            according he behave krega irrespective of internal css. </p>
+    </section>
+
+
+    <section id="CssSelectors">
+        <div class="redElement border bgColor fontSize">
+            <p>This is a paragraph</p>
+        </div>
+
+        <div id="mix">
+            <p>This is another Paragraph</p>
+            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas ipsam quisquam, nemo et odio nam
+                maiores at nobis reiciendis, suscipit porro, iusto dolorem totam voluptatibus quas non possimus
+                inventore obcaecati?</span>
+        </div>
+    </section>
+    <div>
+        <span class="fontSize"> This is span text </span>
+        <footer class="centerAlign fontSize bgColor">END OF THE PAGE</footer>
+    </div>
+
+
+</body>
+
+</html>

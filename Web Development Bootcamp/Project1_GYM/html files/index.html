@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek's Fitness</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* CSS RESET */
+        body {
+            box-sizing: border-box;
+            font-family: 'Mochiy Pop P One', sans-serif;
+            color: white;
+            margin: 0px;
+            padding: 0px;
+            background: url('/Project1_GYM/images/GymBg.jpg');
+        }
+
+        .left {
+            border: 2px solid red;
+            display: inline-block;
+            position: absolute;
+            left: 90px;
+            top: -58px;
+
+        }
+
+        .left img {
+            width: 210px;
+        }
+
+        .center {
+            border: 2px solid green;
+            display: block;
+            width: 900px;
+            margin: 40px auto;
+
+        }
+
+
+        .right {
+            border: 2px solid yellow;
+            display: inline-block;
+            position: absolute;
+            right: 35px;
+            top: 20px;
+        }
+
+        .navbar li a {
+            color: wheat;
+            text-decoration: none;
+            margin: 23px;
+            font-size: 13px;
+        }
+
+        .navbar li a:hover {
+            color: rgb(241, 197, 115);
+            text-decoration: underline;
+
+        }
+
+        .navbar li {
+            display: inline-block;
+            list-style: none;
+        }
+
+        .navbar {
+            text-align: center;
+        }
+
+        .btn {
+            font-family: 'Mochiy Pop P One', sans-serif;
+            border-radius: 10px;
+            background-color: wheat;
+            margin: 11px 14px;
+            padding: 6px 20px;
+        }
+
+        .btn:hover {
+            cursor: pointer;
+            background-color: rgb(241, 197, 115);
+        }
+
+
+        .container {
+            background-color: black;
+            color: darkorange;
+            border: 2px solid hotpink;
+            border-radius: 10px;
+            width: 30%;
+            padding: 11px 80px;
+            margin-top: 360px;
+            margin-left: 40px;
+        }
+
+        .detailstext {
+            border: 2px solid blanchedalmond;
+            border-radius: 10px;
+            font-weight: bold;
+            width: 190px;
+            padding: 4px 12px;
+            margin: 6px 4px;
+        }
+
+        .msgbox {
+            border: 2px solid blanchedalmond;
+            border-radius: 10px;
+            font-weight: bold;
+            width: 419px;
+            padding: 4px 12px;
+            margin: 6px 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="left">
+            <!-- Left box for Logo  -->
+            <img src="/Project1_GYM/images/GymLogo-removebg-preview.png" alt="Gym Logo">
+        </div>
+
+
+        <div class="center">
+            <!-- Center box for NavBar  -->
+            <ul class="navbar">
+                <li><a href="#" class="active">HOME</a></li>
+                <li><a href="#" class="active">ABOUT US</a></li>
+                <li><a href="#" class="active">SERVICES</a></li>
+                <li><a href="#" class="active">GALLARY</a></li>
+                <li><a href="#" class="active">CONTACT US</a></li>
+            </ul>
+        </div>
+
+        <div class="right">
+            <!-- Right box for Buttons  -->
+            <button class="btn">
+                JOIN US
+            </button>
+            <button class="btn">
+                LOGIN
+            </button>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <h2>Begin Your Fitness Journey</h2>
+        <form action="backend.php">
+            <div class="form-group">
+                <input type="text" name="" placeholder="Full Name" class="detailstext">
+                <input type="text" name="" placeholder="Email Address" class="detailstext">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Phone Number" class="detailstext">
+                <input type="text" name="" placeholder="Your City" class="detailstext">
+            </div>
+            <div class="form-group">
+                <textarea name="" cols="30" rows="6" placeholder="What Are Your Fitness Goals?"
+                    class="msgbox"></textarea>
+                <!-- <input type="text" name="" placeholder="What Are Your Fitness Goals?" class="msgbox"> -->
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Register Now" class="btn">
+                <input type="reset" value="Reset" class="btn">
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
